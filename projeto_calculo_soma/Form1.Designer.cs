@@ -127,7 +127,7 @@
             // lblResultado
             // 
             this.lblResultado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblResultado.Location = new System.Drawing.Point(149, 205);
+            this.lblResultado.Location = new System.Drawing.Point(140, 206);
             this.lblResultado.Name = "lblResultado";
             this.lblResultado.Size = new System.Drawing.Size(146, 41);
             this.lblResultado.TabIndex = 8;
