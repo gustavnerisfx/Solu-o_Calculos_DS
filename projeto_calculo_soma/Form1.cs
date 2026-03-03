@@ -133,13 +133,11 @@ namespace projeto_calculo_soma
 
         private void btnParImpar_Click(object sender, EventArgs e)
         {
-            double a = double.Parse(textnum1.Text);
-            double b = double.Parse(textnum2.Text);
+            
+            double aa = double.Parse(lblResultado.Text);
 
-            string resultadoA = (a % 2 == 0) ? "par" : "ímpar";
-            string resultadoB = (b % 2 == 0) ? "par" : "ímpar";
-
-            lblResultado.Text = $"{a} é {resultadoA}\n{b} é {resultadoB}";
+            string resultado = ( aa % 2 == 0) ? "par" : "ímpar";
+            lblResultado.Text = $"{aa} é {resultado}";
 
         }
 
