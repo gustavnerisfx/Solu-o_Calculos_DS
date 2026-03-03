@@ -41,7 +41,7 @@ namespace projeto_calculo_soma
         private void btnSomar_Click(object sender, EventArgs e)
         {
             
-            label1.Text = "+";
+            label3.Text = "+";
             try
             {
                 double a = double.Parse(textnum1.Text);
@@ -58,7 +58,7 @@ namespace projeto_calculo_soma
 
         private void btnLimpar_Click(object sender, EventArgs e)
         {
-            label1.Text = "?";
+            label3.Text = "?";
             lblResultado.Text = "?";
             textnum1.Clear();
             textnum2.Clear();
@@ -82,7 +82,7 @@ namespace projeto_calculo_soma
 
         private void button2_Click(object sender, EventArgs e)
         {
-            label1.Text = "/";
+            label3.Text = "/";
             try
             {
                 double a = double.Parse(textnum1.Text);
@@ -117,7 +117,7 @@ namespace projeto_calculo_soma
 
         private void btnMulti_Click(object sender, EventArgs e)
         {
-            label1.Text = "*";
+            label3.Text = "*";
             try
             {
                 double a = double.Parse(textnum1.Text);
@@ -158,6 +158,11 @@ namespace projeto_calculo_soma
             {
                 lblResultado.Text = (a + " é igual a " + b);
             }
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
