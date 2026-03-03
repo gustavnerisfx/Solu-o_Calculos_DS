@@ -135,19 +135,31 @@ namespace projeto_calculo_soma
         {
             double a = double.Parse(textnum1.Text);
             double b = double.Parse(textnum2.Text);
-            if (a % 2 == 0)
-            {
-                MessageBox.Show($"{a} é par.");
-            }
-            else
-            {
-                MessageBox.Show($"{a} é ímpar.");
-            }
+
+            string resultadoA = (a % 2 == 0) ? "par" : "ímpar";
+            string resultadoB = (b % 2 == 0) ? "par" : "ímpar";
+
+            lblResultado.Text = $"{a} é {resultadoA}\n{b} é {resultadoB}";
+
         }
 
         private void btnComparar_Click(object sender, EventArgs e)
         {
+            double a = double.Parse(textnum1.Text);
+            double b = double.Parse(textnum2.Text);
 
+            if (a > b)
+            {
+                lblResultado.Text = (a + " é maior que " + b);
+            }
+            else if (a < b)
+            {
+                lblResultado.Text = (a + " é menor que " + b);
+            }
+            else
+            {
+                lblResultado.Text = (a + " é igual a " + b);
+            }
         }
     }
 }
