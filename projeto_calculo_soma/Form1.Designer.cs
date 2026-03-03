@@ -76,7 +76,7 @@
             this.label1.Location = new System.Drawing.Point(15, 40);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 28);
+            this.label1.Size = new System.Drawing.Size(52, 28);
             this.label1.TabIndex = 2;
             this.label1.Text = "?";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -203,7 +203,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(502, 363);
+            this.ClientSize = new System.Drawing.Size(494, 363);
             this.Controls.Add(this.btnParImpar);
             this.Controls.Add(this.btnComparar);
             this.Controls.Add(this.btnMulti);
