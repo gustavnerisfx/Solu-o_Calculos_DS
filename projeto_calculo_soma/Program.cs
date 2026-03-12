@@ -1,4 +1,5 @@
-﻿using System;
+﻿using projeto_calculo_soma.Formularios;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace projeto_calculo_soma
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CalculadoraSoma());
+            Application.Run(new MDI_Menu());
         }
     }
 }
