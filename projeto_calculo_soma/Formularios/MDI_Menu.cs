@@ -19,7 +19,7 @@ namespace projeto_calculo_soma.Formularios
 
         private void toolStripDropDownButton1_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void MDI_Menu_Load(object sender, EventArgs e)
@@ -34,7 +34,9 @@ namespace projeto_calculo_soma.Formularios
 
         private void comBotõesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            CalculadoraSoma objCalBot = new CalculadoraSoma();
+            objCalBot.MdiParent = this;
+            objCalBot.Show();
         }
 
         private void MDI_Menu_FormClosing(object sender, FormClosingEventArgs e)
@@ -69,6 +71,13 @@ namespace projeto_calculo_soma.Formularios
         private void timer1_Tick(object sender, EventArgs e)
         {
             staDataHora.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
+        }
+
+        private void comRadioButtonToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmRadio objCalBot = new frmRadio();
+            objCalBot.MdiParent = this;
+            objCalBot.Show();
         }
     }
 }
