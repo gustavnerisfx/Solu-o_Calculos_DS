@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace projeto_calculo_soma.Formularios
 {
@@ -128,6 +129,37 @@ namespace projeto_calculo_soma.Formularios
             frmRadio objCalBot = new frmRadio();
             objCalBot.MdiParent = this;
             objCalBot.Show();
+        }
+
+        private void cascataToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.LayoutMdi(MdiLayout.Cascade);
+
+        }
+
+        private void horizontalmenteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.LayoutMdi(MdiLayout.TileHorizontal);
+        }
+
+        private void verticalmenteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.LayoutMdi(MdiLayout.TileVertical);
+        }
+
+        private void blocoDeNotasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Process.Start("notepad.exe");
+        }
+
+        private void calculadoraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Process.Start("Calc.exe");
+        }
+
+        private void webToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Process.Start("firefox.exe", "https://pt.stackoverflow.com");
         }
     }
 }
