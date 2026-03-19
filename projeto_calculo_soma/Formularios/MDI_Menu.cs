@@ -29,11 +29,31 @@ namespace projeto_calculo_soma.Formularios
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
+            foreach (Form filho in this.MdiChildren)
+            {
+                if (filho is CalculadoraSoma)
+                {
+                    filho.Focus();
+                    return;
+                }
+            }
 
+            CalculadoraSoma objCalBot = new CalculadoraSoma();
+            objCalBot.MdiParent = this;
+            objCalBot.Show();
         }
 
         private void comBotõesToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            foreach (Form filho in this.MdiChildren)
+            {
+                if (filho is CalculadoraSoma)
+                {
+                    filho.Focus();
+                    return;
+                }
+            }
+
             CalculadoraSoma objCalBot = new CalculadoraSoma();
             objCalBot.MdiParent = this;
             objCalBot.Show();
@@ -75,6 +95,36 @@ namespace projeto_calculo_soma.Formularios
 
         private void comRadioButtonToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            foreach (Form filho in this.MdiChildren)
+            {
+                if (filho is frmRadio)
+                {
+                    filho.Focus();
+                    return;
+                }
+            }
+
+            frmRadio objCalBot = new frmRadio();
+            objCalBot.MdiParent = this;
+            objCalBot.Show();
+        }
+
+        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            foreach (Form filho in this.MdiChildren)
+            {
+                if (filho is frmRadio)
+                {
+                    filho.Focus();
+                    return;
+                }
+            }
+
             frmRadio objCalBot = new frmRadio();
             objCalBot.MdiParent = this;
             objCalBot.Show();
