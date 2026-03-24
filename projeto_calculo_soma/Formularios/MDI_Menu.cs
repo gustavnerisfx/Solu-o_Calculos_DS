@@ -161,5 +161,21 @@ namespace projeto_calculo_soma.Formularios
         {
             Process.Start("firefox.exe", "https://pt.stackoverflow.com");
         }
+
+        private void calculadoraPropriaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form filho in this.MdiChildren)
+            {
+                if (filho is calculadorapropia)
+                {
+                    filho.Focus();
+                    return;
+                }
+            }
+
+            calculadorapropia objCalBot = new calculadorapropia();
+            objCalBot.MdiParent = this;
+            objCalBot.Show();
+        }
     }
 }

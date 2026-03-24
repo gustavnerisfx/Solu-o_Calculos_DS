@@ -49,6 +49,10 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.blocoDeNotasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.calculadoraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.webToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.novoToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.abrirToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.salvarToolStripButton = new System.Windows.Forms.ToolStripButton();
@@ -66,10 +70,7 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.staDataHora = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
-            this.blocoDeNotasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.calculadoraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.webToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.calculadoraPropriaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -85,7 +86,6 @@
             this.ajudaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(6, 2, 0, 2);
             this.menuStrip1.Size = new System.Drawing.Size(1328, 33);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
@@ -96,6 +96,7 @@
             this.comBotõesToolStripMenuItem,
             this.comRadioButtonToolStripMenuItem,
             this.especiaisToolStripMenuItem,
+            this.calculadoraPropriaToolStripMenuItem,
             this.toolStripMenuItem1,
             this.sairToolStripMenuItem});
             this.calculosToolStripMenuItem.Name = "calculosToolStripMenuItem";
@@ -165,21 +166,21 @@
             // cascataToolStripMenuItem
             // 
             this.cascataToolStripMenuItem.Name = "cascataToolStripMenuItem";
-            this.cascataToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.cascataToolStripMenuItem.Size = new System.Drawing.Size(246, 34);
             this.cascataToolStripMenuItem.Text = "Cascata";
             this.cascataToolStripMenuItem.Click += new System.EventHandler(this.cascataToolStripMenuItem_Click);
             // 
             // horizontalmenteToolStripMenuItem
             // 
             this.horizontalmenteToolStripMenuItem.Name = "horizontalmenteToolStripMenuItem";
-            this.horizontalmenteToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.horizontalmenteToolStripMenuItem.Size = new System.Drawing.Size(246, 34);
             this.horizontalmenteToolStripMenuItem.Text = "Horizontalmente";
             this.horizontalmenteToolStripMenuItem.Click += new System.EventHandler(this.horizontalmenteToolStripMenuItem_Click);
             // 
             // verticalmenteToolStripMenuItem
             // 
             this.verticalmenteToolStripMenuItem.Name = "verticalmenteToolStripMenuItem";
-            this.verticalmenteToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.verticalmenteToolStripMenuItem.Size = new System.Drawing.Size(246, 34);
             this.verticalmenteToolStripMenuItem.Text = "Verticalmente";
             this.verticalmenteToolStripMenuItem.Click += new System.EventHandler(this.verticalmenteToolStripMenuItem_Click);
             // 
@@ -247,6 +248,40 @@
             this.toolStripButton2.Size = new System.Drawing.Size(34, 28);
             this.toolStripButton2.Text = "toolStripButton2";
             this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
+            // 
+            // toolStripDropDownButton1
+            // 
+            this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.blocoDeNotasToolStripMenuItem,
+            this.calculadoraToolStripMenuItem,
+            this.webToolStripMenuItem});
+            this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
+            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(42, 28);
+            this.toolStripDropDownButton1.Text = "toolStripDropDownButton1";
+            // 
+            // blocoDeNotasToolStripMenuItem
+            // 
+            this.blocoDeNotasToolStripMenuItem.Name = "blocoDeNotasToolStripMenuItem";
+            this.blocoDeNotasToolStripMenuItem.Size = new System.Drawing.Size(235, 34);
+            this.blocoDeNotasToolStripMenuItem.Text = "Bloco de Notas";
+            this.blocoDeNotasToolStripMenuItem.Click += new System.EventHandler(this.blocoDeNotasToolStripMenuItem_Click);
+            // 
+            // calculadoraToolStripMenuItem
+            // 
+            this.calculadoraToolStripMenuItem.Name = "calculadoraToolStripMenuItem";
+            this.calculadoraToolStripMenuItem.Size = new System.Drawing.Size(235, 34);
+            this.calculadoraToolStripMenuItem.Text = "Calculadora";
+            this.calculadoraToolStripMenuItem.Click += new System.EventHandler(this.calculadoraToolStripMenuItem_Click);
+            // 
+            // webToolStripMenuItem
+            // 
+            this.webToolStripMenuItem.Name = "webToolStripMenuItem";
+            this.webToolStripMenuItem.Size = new System.Drawing.Size(235, 34);
+            this.webToolStripMenuItem.Text = "Web";
+            this.webToolStripMenuItem.Click += new System.EventHandler(this.webToolStripMenuItem_Click);
             // 
             // novoToolStripButton
             // 
@@ -382,39 +417,12 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // toolStripDropDownButton1
+            // calculadoraPropriaToolStripMenuItem
             // 
-            this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.blocoDeNotasToolStripMenuItem,
-            this.calculadoraToolStripMenuItem,
-            this.webToolStripMenuItem});
-            this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
-            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(42, 28);
-            this.toolStripDropDownButton1.Text = "toolStripDropDownButton1";
-            // 
-            // blocoDeNotasToolStripMenuItem
-            // 
-            this.blocoDeNotasToolStripMenuItem.Name = "blocoDeNotasToolStripMenuItem";
-            this.blocoDeNotasToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.blocoDeNotasToolStripMenuItem.Text = "Bloco de Notas";
-            this.blocoDeNotasToolStripMenuItem.Click += new System.EventHandler(this.blocoDeNotasToolStripMenuItem_Click);
-            // 
-            // calculadoraToolStripMenuItem
-            // 
-            this.calculadoraToolStripMenuItem.Name = "calculadoraToolStripMenuItem";
-            this.calculadoraToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.calculadoraToolStripMenuItem.Text = "Calculadora";
-            this.calculadoraToolStripMenuItem.Click += new System.EventHandler(this.calculadoraToolStripMenuItem_Click);
-            // 
-            // webToolStripMenuItem
-            // 
-            this.webToolStripMenuItem.Name = "webToolStripMenuItem";
-            this.webToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.webToolStripMenuItem.Text = "Web";
-            this.webToolStripMenuItem.Click += new System.EventHandler(this.webToolStripMenuItem_Click);
+            this.calculadoraPropriaToolStripMenuItem.Name = "calculadoraPropriaToolStripMenuItem";
+            this.calculadoraPropriaToolStripMenuItem.Size = new System.Drawing.Size(273, 34);
+            this.calculadoraPropriaToolStripMenuItem.Text = "Calculadora Propria";
+            this.calculadoraPropriaToolStripMenuItem.Click += new System.EventHandler(this.calculadoraPropriaToolStripMenuItem_Click);
             // 
             // MDI_Menu
             // 
@@ -485,5 +493,6 @@
         private System.Windows.Forms.ToolStripMenuItem blocoDeNotasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem calculadoraToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem webToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem calculadoraPropriaToolStripMenuItem;
     }
 }
