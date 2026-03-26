@@ -315,7 +315,7 @@
             this.btnIgual.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.btnIgual.Location = new System.Drawing.Point(3, 3);
             this.btnIgual.Name = "btnIgual";
-            this.btnIgual.Size = new System.Drawing.Size(440, 61);
+            this.btnIgual.Size = new System.Drawing.Size(440, 48);
             this.btnIgual.TabIndex = 4;
             this.btnIgual.Text = "=";
             this.btnIgual.UseVisualStyleBackColor = true;
