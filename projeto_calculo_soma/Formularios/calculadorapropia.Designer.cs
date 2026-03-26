@@ -30,7 +30,6 @@
         {
             this.lblVisor = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.btno = new System.Windows.Forms.Button();
             this.btnCE = new System.Windows.Forms.Button();
             this.btnC = new System.Windows.Forms.Button();
@@ -43,18 +42,20 @@
             this.btn3 = new System.Windows.Forms.Button();
             this.btn2 = new System.Windows.Forms.Button();
             this.btn1 = new System.Windows.Forms.Button();
-            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnvi = new System.Windows.Forms.Button();
+            this.btn0 = new System.Windows.Forms.Button();
+            this.btnMM = new System.Windows.Forms.Button();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnMenos = new System.Windows.Forms.Button();
             this.btnMais = new System.Windows.Forms.Button();
             this.btnDivi = new System.Windows.Forms.Button();
             this.btnVezes = new System.Windows.Forms.Button();
-            this.button17 = new System.Windows.Forms.Button();
-            this.btnvi = new System.Windows.Forms.Button();
-            this.btn0 = new System.Windows.Forms.Button();
-            this.btnMM = new System.Windows.Forms.Button();
-            this.button21 = new System.Windows.Forms.Button();
+            this.btnElev = new System.Windows.Forms.Button();
+            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnIgual = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
+            this.flowLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblVisor
@@ -64,7 +65,7 @@
             this.lblVisor.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold);
             this.lblVisor.Location = new System.Drawing.Point(12, 9);
             this.lblVisor.Name = "lblVisor";
-            this.lblVisor.Size = new System.Drawing.Size(432, 74);
+            this.lblVisor.Size = new System.Drawing.Size(447, 74);
             this.lblVisor.TabIndex = 0;
             this.lblVisor.Text = "0";
             this.lblVisor.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -92,19 +93,6 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(298, 463);
             this.flowLayoutPanel1.TabIndex = 1;
             this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
-            // 
-            // flowLayoutPanel2
-            // 
-            this.flowLayoutPanel2.Controls.Add(this.btnMenos);
-            this.flowLayoutPanel2.Controls.Add(this.btnMais);
-            this.flowLayoutPanel2.Controls.Add(this.btnDivi);
-            this.flowLayoutPanel2.Controls.Add(this.btnVezes);
-            this.flowLayoutPanel2.Controls.Add(this.button17);
-            this.flowLayoutPanel2.Controls.Add(this.button21);
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(331, 120);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(128, 457);
-            this.flowLayoutPanel2.TabIndex = 2;
             // 
             // btno
             // 
@@ -223,59 +211,6 @@
             this.btn1.UseVisualStyleBackColor = true;
             this.btn1.Click += new System.EventHandler(this.f_digitos);
             // 
-            // flowLayoutPanel3
-            // 
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(16, 589);
-            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(447, 64);
-            this.flowLayoutPanel3.TabIndex = 3;
-            // 
-            // btnMenos
-            // 
-            this.btnMenos.Location = new System.Drawing.Point(3, 3);
-            this.btnMenos.Name = "btnMenos";
-            this.btnMenos.Size = new System.Drawing.Size(125, 69);
-            this.btnMenos.TabIndex = 0;
-            this.btnMenos.Text = "-";
-            this.btnMenos.UseVisualStyleBackColor = true;
-            // 
-            // btnMais
-            // 
-            this.btnMais.Location = new System.Drawing.Point(3, 78);
-            this.btnMais.Name = "btnMais";
-            this.btnMais.Size = new System.Drawing.Size(125, 69);
-            this.btnMais.TabIndex = 1;
-            this.btnMais.Text = "+";
-            this.btnMais.UseVisualStyleBackColor = true;
-            // 
-            // btnDivi
-            // 
-            this.btnDivi.Location = new System.Drawing.Point(3, 153);
-            this.btnDivi.Name = "btnDivi";
-            this.btnDivi.Size = new System.Drawing.Size(125, 69);
-            this.btnDivi.TabIndex = 2;
-            this.btnDivi.Text = "/";
-            this.btnDivi.UseVisualStyleBackColor = true;
-            // 
-            // btnVezes
-            // 
-            this.btnVezes.Location = new System.Drawing.Point(3, 228);
-            this.btnVezes.Name = "btnVezes";
-            this.btnVezes.Size = new System.Drawing.Size(125, 69);
-            this.btnVezes.TabIndex = 3;
-            this.btnVezes.Text = "*";
-            this.btnVezes.UseVisualStyleBackColor = true;
-            // 
-            // button17
-            // 
-            this.button17.Location = new System.Drawing.Point(3, 303);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(125, 69);
-            this.button17.TabIndex = 4;
-            this.button17.Text = "button17";
-            this.button17.UseVisualStyleBackColor = true;
-            this.button17.Click += new System.EventHandler(this.button17_Click);
-            // 
             // btnvi
             // 
             this.btnvi.Location = new System.Drawing.Point(202, 371);
@@ -304,14 +239,86 @@
             this.btnMM.Text = "+/-";
             this.btnMM.UseVisualStyleBackColor = true;
             // 
-            // button21
+            // flowLayoutPanel2
             // 
-            this.button21.Location = new System.Drawing.Point(3, 378);
-            this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(125, 69);
-            this.button21.TabIndex = 5;
-            this.button21.Text = "button21";
-            this.button21.UseVisualStyleBackColor = true;
+            this.flowLayoutPanel2.Controls.Add(this.btnMenos);
+            this.flowLayoutPanel2.Controls.Add(this.btnMais);
+            this.flowLayoutPanel2.Controls.Add(this.btnDivi);
+            this.flowLayoutPanel2.Controls.Add(this.btnVezes);
+            this.flowLayoutPanel2.Controls.Add(this.btnElev);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(331, 120);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(128, 457);
+            this.flowLayoutPanel2.TabIndex = 2;
+            // 
+            // btnMenos
+            // 
+            this.btnMenos.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.btnMenos.Location = new System.Drawing.Point(3, 3);
+            this.btnMenos.Name = "btnMenos";
+            this.btnMenos.Size = new System.Drawing.Size(125, 86);
+            this.btnMenos.TabIndex = 0;
+            this.btnMenos.Text = "-";
+            this.btnMenos.UseVisualStyleBackColor = true;
+            // 
+            // btnMais
+            // 
+            this.btnMais.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnMais.Location = new System.Drawing.Point(3, 95);
+            this.btnMais.Name = "btnMais";
+            this.btnMais.Size = new System.Drawing.Size(125, 86);
+            this.btnMais.TabIndex = 1;
+            this.btnMais.Text = "+";
+            this.btnMais.UseVisualStyleBackColor = true;
+            // 
+            // btnDivi
+            // 
+            this.btnDivi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnDivi.Location = new System.Drawing.Point(3, 187);
+            this.btnDivi.Name = "btnDivi";
+            this.btnDivi.Size = new System.Drawing.Size(125, 86);
+            this.btnDivi.TabIndex = 2;
+            this.btnDivi.Text = "/";
+            this.btnDivi.UseVisualStyleBackColor = true;
+            // 
+            // btnVezes
+            // 
+            this.btnVezes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnVezes.Location = new System.Drawing.Point(3, 279);
+            this.btnVezes.Name = "btnVezes";
+            this.btnVezes.Size = new System.Drawing.Size(125, 86);
+            this.btnVezes.TabIndex = 3;
+            this.btnVezes.Text = "*";
+            this.btnVezes.UseVisualStyleBackColor = true;
+            // 
+            // btnElev
+            // 
+            this.btnElev.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnElev.Location = new System.Drawing.Point(3, 371);
+            this.btnElev.Name = "btnElev";
+            this.btnElev.Size = new System.Drawing.Size(125, 86);
+            this.btnElev.TabIndex = 4;
+            this.btnElev.Text = "^";
+            this.btnElev.UseVisualStyleBackColor = true;
+            this.btnElev.Click += new System.EventHandler(this.button17_Click);
+            // 
+            // flowLayoutPanel3
+            // 
+            this.flowLayoutPanel3.Controls.Add(this.btnIgual);
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(16, 589);
+            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(447, 64);
+            this.flowLayoutPanel3.TabIndex = 3;
+            // 
+            // btnIgual
+            // 
+            this.btnIgual.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.btnIgual.Location = new System.Drawing.Point(3, 3);
+            this.btnIgual.Name = "btnIgual";
+            this.btnIgual.Size = new System.Drawing.Size(440, 61);
+            this.btnIgual.TabIndex = 4;
+            this.btnIgual.Text = "=";
+            this.btnIgual.UseVisualStyleBackColor = true;
             // 
             // calculadorapropia
             // 
@@ -327,6 +334,7 @@
             this.Click += new System.EventHandler(this.f_digitos);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel2.ResumeLayout(false);
+            this.flowLayoutPanel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -352,11 +360,11 @@
         private System.Windows.Forms.Button btnMais;
         private System.Windows.Forms.Button btnDivi;
         private System.Windows.Forms.Button btnVezes;
-        private System.Windows.Forms.Button button17;
+        private System.Windows.Forms.Button btnElev;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
         private System.Windows.Forms.Button btnvi;
         private System.Windows.Forms.Button btn0;
         private System.Windows.Forms.Button btnMM;
-        private System.Windows.Forms.Button button21;
+        private System.Windows.Forms.Button btnIgual;
     }
 }
