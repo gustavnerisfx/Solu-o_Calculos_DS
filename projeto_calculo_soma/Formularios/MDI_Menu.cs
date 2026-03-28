@@ -159,7 +159,11 @@ namespace projeto_calculo_soma.Formularios
 
         private void webToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Process.Start("firefox.exe", "https://pt.stackoverflow.com");
+            Process.Start(new ProcessStartInfo
+            {
+                FileName = "https://www.google.com",
+                UseShellExecute = true
+            });
         }
 
         private void calculadoraPropriaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -176,6 +180,29 @@ namespace projeto_calculo_soma.Formularios
             calculadorapropia objCalBot = new calculadorapropia();
             objCalBot.MdiParent = this;
             objCalBot.Show();
+        }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            foreach (Form filho in this.MdiChildren)
+            {
+                if (filho is calculadorapropia)
+                {
+                    filho.Focus();
+                    return;
+                }
+            }
+
+            calculadorapropia objCalBot = new calculadorapropia();
+            objCalBot.MdiParent = this;
+            objCalBot.Show();
+        }
+
+        private void desenvolvedoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string message = "Gustavo Neris Silva, Lucas Lozano Marsola"; 
+            string title = "Desenvolvedores";
+            MessageBox.Show(message, title);
         }
     }
 }
