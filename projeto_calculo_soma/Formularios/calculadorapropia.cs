@@ -96,5 +96,14 @@ namespace projeto_calculo_soma.Formularios
                 lblVisor.Text = "";
             }
         }
+
+        private void btnMM_Click(object sender, EventArgs e)
+        {
+            if (double.TryParse(lblVisor.Text, out double valor))
+            {
+                valor *= -1;
+                lblVisor.Text = valor.ToString();
+            }
+        }
     }
 }
