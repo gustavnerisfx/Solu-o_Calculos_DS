@@ -204,5 +204,20 @@ namespace projeto_calculo_soma.Formularios
             string title = "Desenvolvedores";
             MessageBox.Show(message, title);
         }
+
+        private void navegadorLocalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form filho in this.MdiChildren)
+            {
+                if (filho is navegador)
+                {
+                    filho.Focus();
+                    return;
+                }
+            }
+
+            navegador objCalBot = new navegador();
+            objCalBot.Show();
+        }
     }
 }
