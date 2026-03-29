@@ -161,7 +161,7 @@ namespace projeto_calculo_soma.Formularios
         {
             Process.Start(new ProcessStartInfo
             {
-                FileName = "https://www.google.com",
+                FileName = "https://duckduckgo.com/",
                 UseShellExecute = true
             });
         }
@@ -206,6 +206,21 @@ namespace projeto_calculo_soma.Formularios
         }
 
         private void navegadorLocalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form filho in this.MdiChildren)
+            {
+                if (filho is navegador)
+                {
+                    filho.Focus();
+                    return;
+                }
+            }
+
+            navegador objCalBot = new navegador();
+            objCalBot.Show();
+        }
+
+        private void toolStripButton4_Click(object sender, EventArgs e)
         {
             foreach (Form filho in this.MdiChildren)
             {
