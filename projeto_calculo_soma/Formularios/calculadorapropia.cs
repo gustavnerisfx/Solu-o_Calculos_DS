@@ -29,13 +29,20 @@ namespace projeto_calculo_soma.Formularios
                 vLimparVisor = false;
             }
             lblVisor.Text += digitos;
+
+            this.ActiveControl = null;
         }
+
 
         private void f_operacoes(object sender, EventArgs e)
         {
             vNumAnt = decimal.Parse(lblVisor.Text);
             vOperacao = ((Button)sender).Text;
             vLimparVisor = true;
+            lblHistorico.Text = "";
+            lblHistorico.Text += vNumAnt + " " + vOperacao + " ";
+            this.ActiveControl = null;
+
         }
 
 
@@ -71,6 +78,7 @@ namespace projeto_calculo_soma.Formularios
                     lblVisor.Text = (Math.Pow((double)vNumAnt, (double)vNumAtual)).ToString();
                     break;
             }
+            lblHistorico.Text += vNumAtual + " = ";
         }
 
         private void btnVirgula_Click(object sender, EventArgs e)
@@ -79,13 +87,15 @@ namespace projeto_calculo_soma.Formularios
             {
                 lblVisor.Text += ",";
             }
-
+            
         }
 
         private void btnC_Click(object sender, EventArgs e)
         {
             vNumAnt = 0;
             lblVisor.Text = "0";
+            lblHistorico.Text = "";
+            
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -103,6 +113,21 @@ namespace projeto_calculo_soma.Formularios
             {
                 valor *= -1;
                 lblVisor.Text = valor.ToString();
+            }
+        }
+
+        private void calculadorapropia_KeyDown(object sender, KeyEventArgs e)
+        {
+            label1.Text = e.KeyCode.ToString();
+            Button botao = new Button();
+            if (e.KeyCode == Keys.Escape) 
+            {
+                Close();
+            }
+            if (e.KeyCode >= Keys.NumPad0 && e.KeyCode <= Keys.NumPad9)
+            {
+                botao.Text = e.KeyCode.ToString().Substring(6);
+                f_digitos(botao, e);
             }
         }
     }
