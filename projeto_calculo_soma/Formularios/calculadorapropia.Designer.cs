@@ -372,10 +372,10 @@
             // flowLayoutPanel3
             // 
             this.flowLayoutPanel3.Controls.Add(this.btn_iGual);
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(3, 589);
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(3, 591);
             this.flowLayoutPanel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(442, 85);
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(442, 83);
             this.flowLayoutPanel3.TabIndex = 3;
             // 
             // btn_iGual
