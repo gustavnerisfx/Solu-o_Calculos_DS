@@ -375,7 +375,7 @@
             this.flowLayoutPanel3.Location = new System.Drawing.Point(3, 589);
             this.flowLayoutPanel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(442, 64);
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(442, 85);
             this.flowLayoutPanel3.TabIndex = 3;
             // 
             // btn_iGual
@@ -384,7 +384,7 @@
             this.btn_iGual.Location = new System.Drawing.Point(3, 4);
             this.btn_iGual.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_iGual.Name = "btn_iGual";
-            this.btn_iGual.Size = new System.Drawing.Size(439, 60);
+            this.btn_iGual.Size = new System.Drawing.Size(439, 72);
             this.btn_iGual.TabIndex = 0;
             this.btn_iGual.Text = "=";
             this.btn_iGual.UseVisualStyleBackColor = true;
