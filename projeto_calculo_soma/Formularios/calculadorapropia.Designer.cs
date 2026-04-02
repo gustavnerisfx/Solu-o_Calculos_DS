@@ -62,7 +62,7 @@
             // 
             // lblVisor
             // 
-            this.lblVisor.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblVisor.BackColor = System.Drawing.Color.Azure;
             this.lblVisor.Font = new System.Drawing.Font("Microsoft Sans Serif", 23F, System.Drawing.FontStyle.Bold);
             this.lblVisor.Location = new System.Drawing.Point(12, 9);
             this.lblVisor.Name = "lblVisor";
@@ -73,6 +73,7 @@
             // 
             // flowLayoutPanel1
             // 
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.Azure;
             this.flowLayoutPanel1.Controls.Add(this.btnBack);
             this.flowLayoutPanel1.Controls.Add(this.btnCE);
             this.flowLayoutPanel1.Controls.Add(this.btnC);
@@ -384,7 +385,7 @@
             this.btn_iGual.Location = new System.Drawing.Point(3, 4);
             this.btn_iGual.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_iGual.Name = "btn_iGual";
-            this.btn_iGual.Size = new System.Drawing.Size(439, 72);
+            this.btn_iGual.Size = new System.Drawing.Size(439, 69);
             this.btn_iGual.TabIndex = 0;
             this.btn_iGual.Text = "=";
             this.btn_iGual.UseVisualStyleBackColor = true;
@@ -392,6 +393,7 @@
             // 
             // lblHistorico
             // 
+            this.lblHistorico.BackColor = System.Drawing.Color.Azure;
             this.lblHistorico.Location = new System.Drawing.Point(345, 9);
             this.lblHistorico.Name = "lblHistorico";
             this.lblHistorico.Size = new System.Drawing.Size(100, 22);
@@ -402,7 +404,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BackColor = System.Drawing.Color.Azure;
             this.ClientSize = new System.Drawing.Size(452, 665);
             this.Controls.Add(this.lblHistorico);
             this.Controls.Add(this.flowLayoutPanel2);
@@ -417,6 +419,7 @@
             this.Shown += new System.EventHandler(this.calculadorapropia_Shown);
             this.Click += new System.EventHandler(this.f_digitos);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.calculadorapropia_KeyDown);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.calculadorapropia_KeyUp);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel2.ResumeLayout(false);
             this.flowLayoutPanel3.ResumeLayout(false);

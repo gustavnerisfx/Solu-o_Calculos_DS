@@ -84,6 +84,10 @@ namespace projeto_calculo_soma.Formularios
             {
                 lblVisor.Text = "";
             }
+            if (lblVisor.Text == "")
+            {
+                lblVisor.Text = "0";
+            }
             this.ActiveControl = null;
         }
 
@@ -109,6 +113,10 @@ namespace projeto_calculo_soma.Formularios
                 {
                     lblVisor.Text = "";
                 }
+                if (lblVisor.Text == "")
+                {
+                    lblVisor.Text = "0";
+                }
                 this.ActiveControl = null;
             }
 
@@ -116,14 +124,29 @@ namespace projeto_calculo_soma.Formularios
             {
                 Close();
             }
+
             if (e.KeyCode >= Keys.D0 && e.KeyCode <= Keys.D9)
             {
                 botao.Text = e.KeyCode.ToString().Substring(1);
+                foreach (Control ctr in flowLayoutPanel1.Controls)
+                {
+                    if (((Button)ctr).Text == botao.Text)
+                    {
+                        ctr.BackColor = Color.LightBlue;
+                    }
+                }
                 f_digitos(botao, e);
             }
             if (e.KeyCode >= Keys.NumPad0 && e.KeyCode <= Keys.NumPad9)
             {
                 botao.Text = e.KeyCode.ToString().Substring(6);
+                foreach (Control ctr in flowLayoutPanel1.Controls)
+                {
+                    if (((Button)ctr).Text == botao.Text)
+                    {
+                        ctr.BackColor = Color.LightBlue;
+                    }
+                }
                 f_digitos(botao, e);
             }
 
@@ -209,6 +232,17 @@ namespace projeto_calculo_soma.Formularios
             }
             lblHistorico.Text += vNumAtual + " = ";
             this.ActiveControl = null;
+        }
+
+        private void calculadorapropia_KeyUp(object sender, KeyEventArgs e)
+        {
+            foreach (Control ctr in flowLayoutPanel1.Controls)
+            {
+                if (ctr is Button)
+                {
+                    ctr.BackColor = SystemColors.ButtonHighlight;
+                }
+            }
         }
     }
 }
