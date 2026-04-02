@@ -25,7 +25,7 @@ namespace projeto_calculo_soma.Formularios
 
         private void MDI_Menu_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
@@ -233,6 +233,15 @@ namespace projeto_calculo_soma.Formularios
 
             navegador objCalBot = new navegador();
             objCalBot.Show();
+        }
+
+        private void sobreToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Process.Start(new ProcessStartInfo
+            {
+                FileName = "https://github.com/gustavnerisfx/Solu-o_Calculos_DS/blob/master/README.md",
+                UseShellExecute = true
+            });
         }
     }
 }

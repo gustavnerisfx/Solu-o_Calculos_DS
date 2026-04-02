@@ -99,7 +99,7 @@ namespace projeto_calculo_soma.Formularios
 
         private void calculadorapropia_KeyDown(object sender, KeyEventArgs e)
         {
-            label1.Text = e.KeyCode.ToString();
+            
             Button botao = new Button();
 
             if(e.KeyCode == Keys.Back)
@@ -112,32 +112,6 @@ namespace projeto_calculo_soma.Formularios
                 this.ActiveControl = null;
             }
 
-            if(e.KeyCode == Keys.Enter)
-            {
-                decimal vNumAtual = decimal.Parse(lblVisor.Text);
-
-                switch (vOperacao)
-                {
-                    case "+":
-                        lblVisor.Text = (vNumAnt + vNumAtual).ToString();
-                        break;
-                    case "-":
-                        lblVisor.Text = (vNumAnt - vNumAtual).ToString();
-                        break;
-                    case "*":
-                        lblVisor.Text = (vNumAnt * vNumAtual).ToString();
-                        break;
-                    case "/":
-                        lblVisor.Text = (vNumAnt / vNumAtual).ToString();
-                        break;
-                    case "^":
-                        lblVisor.Text = (Math.Pow((double)vNumAnt, (double)vNumAtual)).ToString();
-                        break;
-                }
-                lblHistorico.Text += vNumAtual + " = ";
-                this.ActiveControl = null;
-            }
-            
             if (e.KeyCode == Keys.Escape) 
             {
                 Close();
@@ -170,6 +144,9 @@ namespace projeto_calculo_soma.Formularios
                 case Keys.Multiply:
                     botao.Text = "*";
                     f_operacoes(botao, e);
+                    break;
+                case Keys.Return:
+                    btn_iGual_Click(botao, e);
                     break;
             }
 
@@ -217,6 +194,13 @@ namespace projeto_calculo_soma.Formularios
                     lblVisor.Text = (vNumAnt * vNumAtual).ToString();
                     break;
                 case "/":
+                    if (vNumAtual == 0)
+                    {
+                        MessageBox.Show("Não é possível dividir por zero.", "Erro",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        lblVisor.Text = "0";
+                        return;
+                    }
                     lblVisor.Text = (vNumAnt / vNumAtual).ToString();
                     break;
                 case "^":
