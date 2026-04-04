@@ -243,5 +243,20 @@ namespace projeto_calculo_soma.Formularios
                 UseShellExecute = true
             });
         }
+
+        private void calculadoraIAToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form filho in this.MdiChildren)
+            {
+                if (filho is CalcAI)
+                {
+                    filho.Focus();
+                    return;
+                }
+            }
+
+            CalcAI objCalBot = new CalcAI();
+            objCalBot.Show();
+        }
     }
 }
