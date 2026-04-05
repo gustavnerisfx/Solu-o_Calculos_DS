@@ -287,6 +287,7 @@
             // 
             // navegadorLocalToolStripMenuItem
             // 
+            this.navegadorLocalToolStripMenuItem.Image = global::projeto_calculo_soma.Properties.Resources.web_browse1;
             this.navegadorLocalToolStripMenuItem.Name = "navegadorLocalToolStripMenuItem";
             this.navegadorLocalToolStripMenuItem.Size = new System.Drawing.Size(240, 30);
             this.navegadorLocalToolStripMenuItem.Text = "Navegador local";
@@ -294,6 +295,7 @@
             // 
             // calculadoraToolStripMenuItem
             // 
+            this.calculadoraToolStripMenuItem.Image = global::projeto_calculo_soma.Properties.Resources.web_browse1;
             this.calculadoraToolStripMenuItem.Name = "calculadoraToolStripMenuItem";
             this.calculadoraToolStripMenuItem.Size = new System.Drawing.Size(240, 30);
             this.calculadoraToolStripMenuItem.Text = "Calculadora Windows";
