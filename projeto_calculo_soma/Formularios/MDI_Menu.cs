@@ -258,5 +258,10 @@ namespace projeto_calculo_soma.Formularios
             CalcAI objCalBot = new CalcAI();
             objCalBot.Show();
         }
+
+        private void toolStripDropDownButton1_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

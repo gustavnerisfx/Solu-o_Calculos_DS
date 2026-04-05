@@ -39,25 +39,25 @@ namespace projeto_calculo_soma.Formularios
             display.Text = "0";
             display.Font = new Font("Segoe UI", 24);
             display.Dock = DockStyle.Top;
-            display.Height = 60;
+            display.MinimumSize = new Size(0, 70);
+            display.MaximumSize = new Size(0, 70);
             display.TextAlign = HorizontalAlignment.Right;
             display.BackColor = Color.Black;
             display.ForeColor = Color.White;
-
-            this.Controls.Add(display);
-
+            
             var painel = new TableLayoutPanel();
             painel.RowCount = 6;
             painel.ColumnCount = 4;
             painel.Dock = DockStyle.Fill;
 
             for (int i = 0; i < 6; i++)
-                painel.RowStyles.Add(new RowStyle(SizeType.Percent, 16));
+                painel.RowStyles.Add(new RowStyle(SizeType.Percent, 100f / 6f));
 
             for (int i = 0; i < 4; i++)
                 painel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25));
 
             this.Controls.Add(painel);
+            this.Controls.Add(display);
 
             string[,] botoes = {
                 { "CE", "C", "←", "^" },
