@@ -128,6 +128,7 @@ namespace projeto_calculo_soma.Formularios
             if (e.KeyCode >= Keys.D0 && e.KeyCode <= Keys.D9)
             {
                 botao.Text = e.KeyCode.ToString().Substring(1);
+
                 foreach (Control ctr in flowLayoutPanel1.Controls)
                 {
                     if (((Button)ctr).Text == botao.Text)
@@ -140,6 +141,7 @@ namespace projeto_calculo_soma.Formularios
             if (e.KeyCode >= Keys.NumPad0 && e.KeyCode <= Keys.NumPad9)
             {
                 botao.Text = e.KeyCode.ToString().Substring(6);
+
                 foreach (Control ctr in flowLayoutPanel1.Controls)
                 {
                     if (((Button)ctr).Text == botao.Text)
