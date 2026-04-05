@@ -263,5 +263,21 @@ namespace projeto_calculo_soma.Formularios
         {
 
         }
+
+        private void visorÚnicoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form filho in this.MdiChildren)
+            {
+                if (filho is calculadorapropia)
+                {
+                    filho.Focus();
+                    return;
+                }
+            }
+
+            calculadorapropia objCalBot = new calculadorapropia();
+            objCalBot.MdiParent = this;
+            objCalBot.Show();
+        }
     }
 }
