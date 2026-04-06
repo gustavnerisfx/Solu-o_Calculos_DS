@@ -71,8 +71,8 @@ namespace projeto_calculo_soma.Formularios
                 label1.Text = "+";
                 try
                 {
-                    double a = double.Parse(textBox1.Text);
-                    double b = double.Parse(textBox2.Text);
+                    decimal a = decimal.Parse(textBox1.Text);
+                    decimal b = decimal.Parse(textBox2.Text);
                     label3.Text = (a + b).ToString();
                 }
                 catch (FormatException)
@@ -85,8 +85,8 @@ namespace projeto_calculo_soma.Formularios
                 label1.Text = "-";
                 try
                 {
-                    double a = double.Parse(textBox1.Text);
-                    double b = double.Parse(textBox2.Text);
+                    decimal a = decimal.Parse(textBox1.Text);
+                    decimal b = decimal.Parse(textBox2.Text);
                     label3.Text = (a - b).ToString();
 
                 }
@@ -100,8 +100,8 @@ namespace projeto_calculo_soma.Formularios
                 label1.Text = "/";
                 try
                 {
-                    double a = double.Parse(textBox1.Text);
-                    double b = double.Parse(textBox2.Text);
+                    decimal a = decimal.Parse(textBox1.Text);
+                    decimal b = decimal.Parse(textBox2.Text);
                     label3.Text = (a / b).ToString();
                 }
                 catch (FormatException)
@@ -118,8 +118,8 @@ namespace projeto_calculo_soma.Formularios
                 label1.Text = "*";
                 try
                 {
-                    double a = double.Parse(textBox1.Text);
-                    double b = double.Parse(textBox2.Text);
+                    decimal a = decimal.Parse(textBox1.Text);
+                    decimal b = decimal.Parse(textBox2.Text);
                     label3.Text = (a * b).ToString();
                 }
                 catch (FormatException)
@@ -129,7 +129,7 @@ namespace projeto_calculo_soma.Formularios
             }
             if (radioParOuImpar.Checked == true)
             {
-                double aa = double.Parse(label3.Text);
+                decimal aa = decimal.Parse(label3.Text);
 
                 string resultado = (aa % 2 == 0) ? "par" : "ímpar";
                 label3.Text = $"{aa} é {resultado}";

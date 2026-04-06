@@ -256,6 +256,7 @@ namespace projeto_calculo_soma.Formularios
             }
 
             CalcAI objCalBot = new CalcAI();
+            objCalBot.MdiParent = this;
             objCalBot.Show();
         }
 

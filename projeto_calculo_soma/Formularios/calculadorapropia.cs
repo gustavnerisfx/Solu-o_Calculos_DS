@@ -101,6 +101,8 @@ namespace projeto_calculo_soma.Formularios
             this.ActiveControl = null;
         }
 
+        
+
         private void calculadorapropia_KeyDown(object sender, KeyEventArgs e)
         {
             
@@ -123,6 +125,15 @@ namespace projeto_calculo_soma.Formularios
             if (e.KeyCode == Keys.Escape) 
             {
                 Close();
+            }
+
+            if (e.KeyCode >= Keys.Oemcomma)
+            {
+
+                foreach (Control ctr in flowLayoutPanel1.Controls)
+                {
+                    ctr.BackColor = Color.LightBlue;
+                }
             }
 
             if (e.KeyCode >= Keys.D0 && e.KeyCode <= Keys.D9)
@@ -244,6 +255,15 @@ namespace projeto_calculo_soma.Formularios
                 {
                     ctr.BackColor = SystemColors.ButtonHighlight;
                 }
+            }
+        }
+
+        private void btnC_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Control crt;
+            foreach (Control ctr in flowLayoutPanel1.Controls)
+            {
+                ctr.BackColor = Color.LightBlue;
             }
         }
     }

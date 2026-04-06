@@ -44,8 +44,8 @@ namespace projeto_calculo_soma
             label3.Text = "+";
             try
             {
-                double a = double.Parse(textnum1.Text);
-                double b = double.Parse(textnum2.Text);
+                decimal a = decimal.Parse(textnum1.Text);
+                decimal b = decimal.Parse(textnum2.Text);
                 lblResultado.Text = (a + b).ToString();
             }
             catch (FormatException)
@@ -85,8 +85,8 @@ namespace projeto_calculo_soma
             label3.Text = "/";
             try
             {
-                double a = double.Parse(textnum1.Text);
-                double b = double.Parse(textnum2.Text);
+                decimal a = decimal.Parse(textnum1.Text);
+                decimal b = decimal.Parse(textnum2.Text);
                 lblResultado.Text = (a / b).ToString();
             }
             catch (FormatException)
@@ -104,8 +104,8 @@ namespace projeto_calculo_soma
             label1.Text = "-";
             try
             {
-                double a = double.Parse(textnum1.Text);
-                double b = double.Parse(textnum2.Text);
+                decimal a = decimal.Parse(textnum1.Text);
+                decimal b = decimal.Parse(textnum2.Text);
                 lblResultado.Text = (a - b).ToString();
             }
             catch (FormatException)
@@ -120,8 +120,8 @@ namespace projeto_calculo_soma
             label3.Text = "*";
             try
             {
-                double a = double.Parse(textnum1.Text);
-                double b = double.Parse(textnum2.Text);
+                decimal a = decimal.Parse(textnum1.Text);
+                decimal b = decimal.Parse(textnum2.Text);
                 lblResultado.Text = (a * b).ToString();
             }
             catch (FormatException)
@@ -134,7 +134,7 @@ namespace projeto_calculo_soma
         private void btnParImpar_Click(object sender, EventArgs e)
         {
             
-            double aa = double.Parse(lblResultado.Text);
+            decimal aa = decimal.Parse(lblResultado.Text);
 
             string resultado = ( aa % 2 == 0) ? "par" : "ímpar";
             lblResultado.Text = $"{aa} é {resultado}";
@@ -143,8 +143,8 @@ namespace projeto_calculo_soma
 
         private void btnComparar_Click(object sender, EventArgs e)
         {
-            double a = double.Parse(textnum1.Text);
-            double b = double.Parse(textnum2.Text);
+            decimal a = decimal.Parse(textnum1.Text);
+            decimal b = decimal.Parse(textnum2.Text);
 
             if (a > b)
             {
