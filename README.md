@@ -9,3 +9,4 @@
 
 <p>O software contém uma calculadora básica, de layout simples e que permite realizar as principais operações, comparar se dois números são ímpar ou par e qual é o maior. Essa calculadora também foi programada de forma com que impeça o usuário de dividir qualquer número por zero, e também de abrir mais uma da mesma instancia,</p>
 
+![imagem do projeto](calculadorabasica.png)
