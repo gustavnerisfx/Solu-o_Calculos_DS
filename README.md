@@ -16,3 +16,9 @@
 <p>Essa calculadora tem o mesmo funcionamento da anterior, porém você marca qual operação realizar com radiobuttons, e depois clica em um button para realizar a operação com os números digitados nas duas textbox</p>
 
 ![imagem do projeto](radiobutton.png)
+
+### Calculadora comum
+
+<p>Essa calculadora funciona como uma padrão do Windows, ela faz as 4 operações junto com exponênciação, transforma o número digitado em negativo ou positivo, tem os botões Clear e Clear Entry e vem com um label mostrando o histórico das contas.</p>
+
+![imagem do projeto](calculadora.png)
